@@ -1,0 +1,37 @@
+<!-- HTML source code for login page -->
+<head>
+  <link rel="stylesheet" href="/static/createaccountloginformstyle.css"> <!-- link to css file to style login form -->
+   <link rel="stylesheet" href="/static/formstyle.css">  <!-- link to main css file to style form -->
+</head>
+{% extends 'base3.html' %} <!-- Extend from base3.html which is the HTML file for the responsive navbar once logged out -->
+
+{% block content %} <!-- block content to display the content of the login page -->
+<h2>Log In</h2>
+<form method="post"> <!-- form to take input from user to login -->
+  <section1 class="section1 left">
+
+    <div class="input-container">
+      <label for="username.">Username</label>
+      <input type="text" id="username" name="username" placeholder="Username" />
+    </div>
+    <div class="input-container">
+      <label for="password.">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" />
+    </div>
+      <div class="input-container">
+          <br>
+      <button type="submit" class="btn transparent">Log In</button>
+    </div>
+
+  </section1>
+  <section1 class="section1 right">
+    <div class="input-container">
+      <img src="/static/login.png" width="250" height="350"> <!-- image to display on the right side of the login form -->
+    </div>
+    </section1>
+
+
+</form>
+
+{% endblock %} <!-- end of block content -->
+```

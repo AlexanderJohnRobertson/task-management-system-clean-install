@@ -1,0 +1,113 @@
+/* This is the CSS for responsive tables to display data from the database */
+/* Original CSS sourced from codepen.io and modified by S275931 to suit the application. https://codepen.io/AllThingsSmitty/pen/MyqmdM */
+table {
+  border: 1px solid #3c3f3f;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+    overflow-y:scroll;
+   height: 100%;
+   display:block;
+} /* style for table */
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+    color: #ff8900;
+} /* style for table caption */
+
+table tr {
+  background-color: #3c3f3f;
+  border: 1px solid #fba600;
+  width: 100%;
+  padding: .35em;
+} /* style for table tr */
+
+table th,
+table td {
+  padding: .625em;
+  text-align: left;
+    color: #ff8900;
+  width: 100rem;
+    border: 1px solid #fd8800;
+    border-color: #ff8900;
+} /* style for table th and table td */
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+   width: 100rem;
+    border: 1px solid #fba600;
+    border-color: #ff8900;
+} /* style for table th */
+
+.table-container {
+  max-width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+  position: relative;
+    align-items: center;
+  overflow-y:scroll;
+   height: 100%;
+   display:block;
+
+} /* style for table-container */
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  } /* style for table */
+
+  table caption {
+    font-size: 1.3em;
+  } /* style for table caption */
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  } /* style for table thead */
+
+  table tr {
+    border-bottom: 3px solid #fda700;
+    display: block;
+    margin-bottom: .625em;
+    width: 100%;
+  } /* style for table tr */
+
+  table td {
+    border-bottom: 1px solid #fda700;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    width: 100%;
+  } /* style for table td */
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  } /* style for table td::before */
+
+  table td:last-child {
+    border-bottom: 0;
+  } /* style for table td:last-child */
+} /* style for responsive table */
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+} /* style for body */

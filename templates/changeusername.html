@@ -1,0 +1,49 @@
+<!-- HTML source code for Change Username page -->
+<head>
+  <link rel="stylesheet" href="/static/formstyle.css"> <!-- Link to the CSS file for styling the form -->
+</head>
+{% extends 'base4.html' %} <!-- Extend from base4.html which is the HTML file for the responsive navbar once logged in -->
+
+{% block content %} <!-- Content block for the form -->
+
+          <h1 class="heading1">{% block title %} Change Username {% endblock %}</h1> <!-- Title for the form -->
+          <div class="wpcf7" id="wpcf7-f156-p143-o1 formwrap">
+    <form method="post" class="wpcf7-form" novalidate="novalidate"> <!-- Form to change the username -->
+        <div style="display: none;">
+            <input type="hidden" name="_wpcf7" value="156">
+            <input type="hidden" name="_wpcf7_version" value="3.7.2">
+            <input type="hidden" name="_wpcf7_locale" value="en_US">
+            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f156-p143-o1">
+            <input type="hidden" name="_wpnonce" value="d1da331d93">
+        </div>
+        <p>
+           <span class="wpcf7-form-control-wrap username">
+             <label class="text1">Existing Username:</label>
+             <input type="text" name="username" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your current username.">
+          </span>
+          <span class="wpcf7-form-control-wrap newUsername">
+             <label class="text1">New Username:</label>
+             <input type="text" name="newUsername" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="New username.">
+          </span>
+          <span class="wpcf7-form-control-wrap confirmNewUsername       ">
+             <label class="text1">Confirm New Username:</label>
+             <input type="text" name="confirmNewUsername" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Confirm new username.">
+          </span>
+          <span class="wpcf7-form-control-wrap password">
+             <label class="text1">Password:</label>
+             <input type="password" name="password" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Enter your password to authorise changes.">
+          </span>
+          <button type="submit" class="btn transparent">Change Username</button> <!-- Submit button to change the username -->
+            <br>
+            <br>
+            <br>
+          <img class="ajax-loader" src="http://www.jordancundiff.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
+      </p>
+      <div class="wpcf7-response-output wpcf7-display-none">
+      </div>
+  </form>
+</div>
+
+
+{% endblock %} <!-- End of content block -->
+```

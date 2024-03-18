@@ -1,0 +1,41 @@
+<!-- HTML source code for view tasks page -->
+<head>
+    <link rel="stylesheet" href="/static/tablestyle.css"> <!-- Link to the CSS file to format and style the table -->
+</head>
+
+{% extends 'base4.html' %} <!-- Extend from base4.html which is the HTML file for the responsive navbar while logged in -->
+
+{% block content %} <!-- The content block is where the content of the page will be displayed -->
+  <table> <!-- Table to display the tasks -->
+  <caption>View Tasks</caption> <!-- Table title -->
+  <thead>
+    <tr>
+      <th scope="col">Task ID</th> <!-- Table headers -->
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Due Date</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Status</th>
+        <th scope="col">Project ID</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+  {% for row in data1 %} <!-- For loop to iterate through the data1 list and display the list of tasks from the database -->
+    <tr>
+      <td data-label="Task ID">{{ row[0] }}</td> <!-- Display the task ID -->
+      <td data-label="Title">{{ row[1] }}</td> <!-- Display the task title -->
+      <td data-label="Description">{{ row[2] }}</td> <!-- Display the task description -->
+      <td data-label="Due Date">{{ row[3] }}</td> <!-- Display the task due date -->
+        <td data-label="Priority">{{ row[4] }}</td> <!-- Display the task priority -->
+        <td data-label="Status">{{ row[5] }}</td> <!-- Display the task status -->
+        <td data-label="Project ID">{{ row[6] }}</td> <!-- Display the project ID -->
+
+    </tr>
+  {% endfor %} <!-- End of for loop -->
+  </tbody>
+</table>
+
+{% endblock %} <!-- End of content block -->
+```

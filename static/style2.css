@@ -1,0 +1,584 @@
+    /* Main CSS for the application including responsive navbars and to generate hamburger menu when screen is
+     too small to display the full navebar. */
+/* Original CSS sourced from codepen.io and modified by S275931 to suit the application. https://codepen.io/GilaniRabbu/pen/jOQVejz */
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* Poppins font */
+
+:root { /* CSS Variables */
+  --clr-bg-header: #24262b;
+  --clr-btn: #24262b;
+  --clr-dropdown: #dd00ff;
+  --clr-nav-hover: #dd00ff;
+  --clr-dropdown-hov: #2b2d30;
+  --clr-dropdown-link-hov: #dd00ff;
+  --clr-light: #ffffff;
+} /* CSS Variables */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} /* Reset */
+
+body { /* Body */
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+} /* List */
+
+a {
+  text-decoration: none;
+} /* Anchor */
+
+header { /* Header */
+  position: sticky;
+  top: 0px;
+  background-color: var(--clr-bg-header);
+  width: 100%;
+  z-index: 1000;
+} /* Header */
+
+section {
+  position: relative;
+  height: calc(100vh - 3rem);
+  width: 100%;
+  background-color: #3c3f40;
+  overflow: hidden;
+} /* Section */
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(30, 130, 95, 0.5);
+} /* Overlay */
+
+.image {
+  position: absolute;
+  width: 54%;
+  height: 80%;
+  left: 23%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} /* Image */
+
+.image2 {
+  position: absolute;
+  width: 54%;
+  height: 70%;
+  left: 23%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} /* Image */
+
+.container {
+  max-width: 65rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+    align-items: center;
+
+} /* Container */
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+} /* Logo Container */
+
+.nav-btn {
+  flex: 3;
+  display: flex;
+} /* Nav Button */
+
+.nav-links {
+  flex: 2;
+} /* Nav Links */
+
+.log-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+} /* Log Sign */
+
+.logo {
+  color: var(--clr-light);
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  line-height: 3rem;
+} /* Logo */
+
+.logo span {
+  font-weight: 300;
+} /* Logo Span */
+
+.btn {
+  display: inline-block;
+  padding: .5rem 1.3rem;
+  font-size: .8rem;
+  border-radius: 2rem;
+  line-height: 1;
+  margin: 0 .2rem;
+  transition: .3s;
+  text-transform: uppercase;
+
+} /* Button */
+
+.btn.solid {
+  background-color: #fbf3f3;
+  color: #000000;
+} /* Button Solid */
+
+.btn.solid:hover {
+  background-color: #78ff00;
+  color: #ffffff;
+} /* Button Solid Hover */
+
+.btn.transparent {
+  background-color: #dd00ff;
+  color: #ffffff;
+} /* Button Transparent */
+.btn.transparent:hover {
+  background-color: #ff8900;
+  color: #000000;
+} /* Button Transparent Hover */
+
+
+
+
+.nav-links > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} /* Nav Links UL */
+
+.nav-link {
+  position: relative;
+} /* Nav Link */
+
+.nav-link > a {
+  line-height: 3rem;
+  color: var(--clr-light);
+  padding: 0 .8rem;
+  letter-spacing: 1px;
+  font-size: .95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .5s;
+} /* Nav Link A */
+
+.nav-link > a > i {
+  margin-left: .2rem;
+} /* Nav Link A I */
+
+.nav-link:hover > a {
+  transform: scale(1.1);
+} /* Nav Link Hover A */
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 10rem;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+} /* Dropdown */
+
+.dropdown ul {
+  position: relative;
+} /* Dropdown UL */
+
+.dropdown-link > a {
+  display: flex;
+  background-color: var(--clr-light);
+  color: var(--clr-dropdown);
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  align-items: center;
+  justify-content: space-between;
+  transition: .3s;
+} /* Dropdown Link A */
+
+.dropdown-link:hover > a {
+  background-color: var(--clr-dropdown);
+  color: var(--clr-light);
+} /* Dropdown Link Hover A */
+
+.dropdown-link:not(:nth-last-child(2)) {
+  border-bottom: 1px solid var(--clr-light);
+} /* Dropdown Link Not Nth Last Child */
+
+.dropdown-link i {
+  transform: rotate(-90deg);
+} /* Dropdown Link I */
+
+.arrow {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: -5.5px;
+  left: 32px;
+  background-color: var(--clr-light);
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: .3s;
+  z-index: -1;
+} /* Arrow */
+
+.dropdown-link:first-child:hover ~ .arrow {
+  background-color: var(--clr-dropdown);
+} /* Dropdown Link First Child Hover Arrow */
+
+.dropdown-link {
+  position: relative;
+} /* Dropdown Link */
+
+.dropdown.second {
+  top: 0;
+  left: 100%;
+  padding-left: .8rem;
+  cursor: pointer;
+  transform: translateX(10px);
+} /* Dropdown Second */
+
+.dropdown.second .arrow {
+  top: 10px;
+  left: -5.5px;
+} /* Dropdown Second Arrow */
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover>.dropdown {
+  transform: translate(0, 0);
+  opacity: 1;
+  pointer-events: auto;
+} /* Nav Link Hover Dropdown */
+
+.hamburger-menu-container {
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+} /* Hamburger Menu Container */
+
+.hamburger-menu {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+} /* Hamburger Menu */
+
+.hamburger-menu div {
+  width: 1.6rem;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--clr-light);
+  position: relative;
+  z-index: 1001;
+  transition: .5s;
+} /* Hamburger Menu Div */
+
+.hamburger-menu div:before,
+.hamburger-menu div:after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: var(--clr-light);
+  border-radius: 3px;
+  transition: .5s;
+}  /* Hamburger Menu Div Before After */
+
+.hamburger-menu div:before {
+  transform: translateY(-7px);
+} /* Hamburger Menu Div Before */
+
+.hamburger-menu div:after {
+  transform: translateY(7px);
+} /* Hamburger Menu Div After */
+
+#check {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 90000;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
+} /* Check */
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div {
+  background-color: transparent;
+} /* Check Checked Hamburger Menu Container Hamburger Menu Div */
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:before {
+  transform: translateY(0) rotate(-45deg);
+} /* Check Checked Hamburger Menu Container Hamburger Menu Div Before */
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
+  transform: translateY(0) rotate(45deg);
+} /* Check Checked Hamburger Menu Container Hamburger Menu Div After */
+
+@keyframes animation {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  } /* Animation From */
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  } /* Animation To */
+} /* Keyframes Animation */
+
+@media (max-width : 1312px ){
+  .hamburger-menu-container {
+    display: flex;
+  } /* Hamburger Menu Container */
+
+  #check {
+    display: block;
+  } /* Check */
+
+  .nav-btn {
+    position: fixed;
+    height: calc(100vh - 3rem);
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-btn);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: .65s;
+  } /* Nav Button */
+
+  #check:checked ~ .nav-btn {
+    transform: translateX(0);
+  }  /* Check Checked Nav Button */
+
+  #check:checked ~ .nav-btn .nav-link,
+  #check:checked ~ .nav-btn .log-sign {
+    animation: animation .5s ease forwards var(--i);
+  } /* Check Checked Nav Button Nav Link Log Sign */
+
+  .nav-links {
+    flex: initial;
+    width: 100%;
+  } /* Nav Links */
+
+  .nav-links > ul {
+    flex-direction: column;
+  } /* Nav Links UL */
+
+  .nav-link {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(15px);
+  } /* Nav Link */
+
+  .nav-link > a {
+    line-height: 1;
+    padding: 1.6rem 2rem;
+  } /* Nav Link A */
+
+  .nav-link:hover > a {
+    transform: scale(1);
+    background-color: var(--clr-nav-hover);
+  } /* Nav Link Hover A */
+
+  .dropdown,
+  .dropdown.second {
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    padding: 0;
+    background-color: var(--clr-dropdown-hov);
+    display: none;
+  } /* Dropdown Dropdown Second */
+
+  .nav-link:hover > .dropdown,
+  .dropdown-link:hover>.dropdown {
+    display: block;
+  } /* Nav Link Hover Dropdown Dropdown Link Hover Dropdown */
+
+  .nav-link:hover > a > i,
+  .dropdown-link:hover>a>i {
+    transform: rotate(360deg);
+  } /* Nav Link Hover A I Dropdown Link Hover A I */
+
+  .dropdown-link > a {
+    background-color: transparent;
+    color: var(--clr-light);
+    padding: 1.2rem 2rem;
+    line-height: 1;
+  } /* Dropdown Link A */
+
+  .dropdown.second .dropdown-link > a {
+    padding: 1.2rem 2rem 1.2rem 3rem;
+  } /* Dropdown Second Dropdown Link A */
+
+  .dropdown.second .dropdown.second .dropdown-link > a {
+    padding: 1.2rem 2rem 1.2rem 4rem;
+  } /* Dropdown Second Dropdown Second Dropdown Link A */
+
+  .dropdown-link:not(:nth-last-child(2)) {
+    border-bottom: none;
+  } /* Dropdown Link Not Nth Last Child */
+
+  .arrow {
+    z-index: 1;
+    background-color: var(--clr-btn);
+    left: 10%;
+    transform: scale(1.1) rotate(45deg);
+    transition: .5s;
+  } /* Arrow */
+
+  .nav-link:hover .arrow {
+    background-color: var(--clr-nav-hover);
+  } /* Nav Link Hover Arrow */
+
+  .dropdown .dropdown .arrow {
+    display: none;
+  } /* Dropdown Dropdown Arrow */
+
+  .dropdown-link:hover > a {
+    background-color: var(--clr-dropdown-link-hov);
+  } /* Dropdown Link Hover A */
+
+  .dropdown-link:first-child:hover ~ .arrow {
+    background-color: var(--clr-nav-hover);
+  } /* Dropdown Link First Child Hover Arrow */
+
+  .nav-link > a > i {
+    font-size: 1.1rem;
+    transform: rotate(-90deg);
+    transition: .7s;
+  } /* Nav Link A I */
+
+  .dropdown i {
+    font-size: 1rem;
+    transition: .7s;
+  } /* Dropdown I */
+
+  .log-sign {
+    flex: initial;
+    width: 100%;
+    padding: 1.5rem 1.9rem;
+    justify-content: flex-start;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+} /* Media Query */
+
+       .message {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+        nav a {
+            color: #d64161;
+            font-size: 2em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+        .badalert {
+            padding: 20px;
+            margin: 5px;
+            color: #970020;
+            background-color: #ffd5de;
+        } /* Bad Alert style for flash messages */
+        .success {
+            padding: 20px;
+            margin: 5px;
+            color: #26ff00;
+            background-color: #e0ffd5;
+        }
+
+        .body {
+            background-color: #3a3b3f;
+        } /* Body colour */
+
+
+        .spacebutton {
+            color: #24262b;
+        } /* Space button colour for layout */
+        .spacebutton2 {
+            color: #3a3b3f;
+        } /* Space button colour for layout */
+
+        .table-responsive {
+            color: #fda700;
+            font-size: 20px;
+        } /* Table responsive style */
+
+        .tableStyle {
+            color: #fda700;
+        } /* Table style */
+
+        .table{
+   overflow-y:scroll;
+   height: 90%;
+   display:block;
+} /* Table style */
+
+        .access-denied {
+            color: #ff0000;
+        } /* Access denied style for access denied page text */
+
+         .heading1 {
+            font-size: 40px;
+            color: #ffffff;
+        } /* Heading 1 style */
+
+        .text1 {
+            font-size: 30px;
+            color: #ffffff;
+        } /* Text 1 style */
+
+        .button1 {
+        background-color: #dd00ff; /* Green */
+        border: none;
+        color: white;
+        padding: 8px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+            transition-duration: 0.4s;
+        } /* Button 1 style */
+
+        .button1:hover {
+        background-color: #ff8900; /* Green */
+        color: white;
+        } /* Button 1 hover style */
+
+        .heading2 {
+            font-size: 30px;
+            color: #ff0000;
+        } /* Heading 2 style */

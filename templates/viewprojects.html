@@ -1,0 +1,37 @@
+<!-- HTML source code for view projects page -->
+<head>
+    <link rel="stylesheet" href="/static/tablestyle.css"> <!-- Link to the CSS file to format and style the table -->
+</head>
+
+{% extends 'base4.html' %} <!-- Extend from base4.html which is the HTML file for the responsive navbar while logged in -->
+
+{% block content %} <!-- The content block is where the content of the page will be displayed -->
+<div class="table-container"> <!-- The table container is used to format the table and make it responsive -->
+  <table> <!-- The table is used to display the projects from the database in a tabular format -->
+  <caption>View Projects</caption>
+  <thead>
+    <tr>
+      <th scope="col">Project ID</th> <!-- Table headers for the project ID, title, description and assigned tasks -->
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Assigned Tasks</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+  {% for row in data1 %} <!-- For loop to iterate through the data1 list and display the list of projects from the database -->
+    <tr>
+      <td data-label="Project ID">{{ row[0] }}</td> <!-- Display the project ID -->
+      <td data-label="Title">{{ row[1] }}</td> <!-- Display the project title -->
+      <td data-label="Description">{{ row[2] }}</td> <!-- Display the project description -->
+      <td data-label="Assigned Tasks">{{ row[3] }}</td> <!-- Display the number of assigned tasks for the project -->
+
+    </tr>
+  {% endfor %} <!-- End of for loop -->
+  </tbody>
+</table>
+  </div>
+
+{% endblock %} <!-- End of content block -->
+```

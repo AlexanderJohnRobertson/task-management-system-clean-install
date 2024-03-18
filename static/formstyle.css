@@ -1,0 +1,203 @@
+/* This is the CSS for styling the responsive CRUD forms */
+/* Original CSS sourced from codepen.io and modified by S275931 to suit the application. https://codepen.io/andstudio/pen/eYNeMM */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro); /* Import fonts */
+body { /* style for body */
+	  background: #3c3f3f;
+  	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+    padding-top: 0px;
+}
+
+h1 { /* style for h1 */
+   color: #fff;
+   text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+   padding-top: 10px;
+   font-size: 100px;
+   font-weight: 700;
+   text-align: center;
+   font-family: 'Source Sans Pro', sans-serif;
+   margin: 0px;
+}
+
+form { /* style for form */
+    margin-left:auto;
+    margin-right:auto;
+    width: 965px;
+    height: 100%;
+    padding:10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    overflow: scroll;
+}
+
+textarea{ /* style for textarea */
+	  background: rgba(0, 0, 0, 0.4);
+    width: 894px;
+    height: 110px;
+    border: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 45px;
+    padding-right: 20px;
+    padding-top: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+select { /* style for select */
+    width: 960px;
+    height: 48px;
+    line-height: 1.5;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -mox-border-radius: 10px;
+    color: #fff;
+    display: block;
+    background: transparent;
+    background-color: rgba(0,0,0,.4);
+    margin-bottom: 20px;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.textinput, .emailinput { /* style for textinput and emailinput */
+    width: 894px;
+    height: 48px;
+    border: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 5px;
+}
+
+input[type=submit] { /* style for submit button */
+    cursor: pointer;
+}
+
+input.textinput { /* style for textinput */
+	  background: rgba(0, 0, 0, 0.4);
+	  padding-left: 45px;
+}
+
+input.emailinput { /* style for emailinput */
+	  background: rgba(0, 0, 0, 0.4);
+	  padding-left: 45px;
+}
+
+input.message { /* style for message */
+	  background: rgba(0, 0, 0, 0.4);
+	  padding-left: 45px;
+}
+
+select.indent {
+	  padding-left: 45px;
+    cursor: pointer;
+} /* style for select.indent */
+
+::-webkit-input-placeholder { /* style for input placeholder */
+	  color: #fff;
+}
+
+:-moz-placeholder{
+    color: #fff;
+} /* style for input placeholder */
+
+::-moz-placeholder {
+    color: #fff;
+}   /* style for input placeholder */
+
+:-ms-input-placeholder {
+	  color: #fff;
+} /* style for input placeholder */
+
+input:focus, textarea:focus {
+	  background-color: rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+    -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+    box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+	  overflow: hidden;
+} /* style for input and textarea focus */
+
+
+
+.flat {
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	outline: none;
+  position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+} /* style for flat */
+
+
+.flat:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+} /* style for flat:before */
+
+
+.flat {
+   width: 960px !important;
+   height: 48px;
+   overflow: hidden;
+   margin-bottom: 20px;
+   background: url(http://www.jordancundiff.com/wp-content/uploads/2014/03/icon-dropdown.png) no-repeat right;
+   } /* style for flat */
+
+@media only screen and ( min-width: 768px ) and ( max-width: 1035px ) {
+  h1 { font-size: 80px; }
+  form { width: 736px !important; }
+    #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat > select, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat { width: 731px !important; }
+    .textinput, .emailinput, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.description > textarea { width: 666px !important; }
+} /* style for media query */
+
+@media only screen and ( max-width: 804px ) {
+    h1 { font-size: 50px; }
+  form { width: 450px !important; }
+   #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat > select, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat { width: 445px !important; }
+    .textinput, .emailinput, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.description > textarea { width: 380px !important; }
+} /* style for media query */
+
+@media only screen and ( max-width: 517px ) {
+     h1 { font-size: 30px; }
+  form { width: 295px !important; }
+  #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat > select, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat { width: 290px !important; }
+    .textinput, .emailinput, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.description > textarea { width: 225px !important; }
+  .btn { width: 110px; }
+} /* style for media query */

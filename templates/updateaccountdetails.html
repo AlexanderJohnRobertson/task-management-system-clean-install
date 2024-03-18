@@ -1,0 +1,57 @@
+<!-- HTML source code for update account details page -->
+<head>
+  <link rel="stylesheet" href="/static/formstyle.css"> <!-- Link to cascading stylesheet to style form -->
+</head>
+{% extends 'base4.html' %} <!-- Extend from base4.html which is the HTML file for the responsive navbar while logged in -->
+
+{% block content %} <!-- Block of content to be displayed on the page -->
+
+          <h1 class="heading1">{% block title %} Update Account Details {% endblock %}</h1> <!-- Title for the page -->
+          <div class="wpcf7" id="wpcf7-f156-p143-o1 formwrap">
+    <form method="post" class="wpcf7-form" novalidate="novalidate"> <!-- Form to update account details -->
+        <div style="display: none;">
+            <input type="hidden" name="_wpcf7" value="156">
+            <input type="hidden" name="_wpcf7_version" value="3.7.2">
+            <input type="hidden" name="_wpcf7_locale" value="en_US">
+            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f156-p143-o1">
+            <input type="hidden" name="_wpnonce" value="d1da331d93">
+        </div>
+        <p>
+           <span class="wpcf7-form-control-wrap username">
+             <label class="text1">Username:</label>
+             <input type="text" name="username" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Current Username">
+          </span>
+          <span class="wpcf7-form-control-wrap firstname">
+             <label class="text1">Update First Name:</label>
+             <input type="text" name="updateFirstName" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Change First Name.">
+          </span>
+          <span class="wpcf7-form-control-wrap lastname">
+             <label class="text1">Update Last Name:</label>
+             <input type="text" name="updateLastName" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Change Last Name.">
+          </span>
+          <span class="wpcf7-form-control-wrap emailaddress">
+             <label class="text1">Update Email Address:</label>
+             <input type="email" name="updateEmail" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder='Change Email Address.'>
+          </span>
+          <span class="wpcf7-form-control-wrap phonenumber">
+             <label class="text1">Update Phone Number:</label>
+             <input type="number" name="updatePhoneNumber" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder='Change Phone Number.'>
+          </span>
+          <span class="wpcf7-form-control-wrap password">
+             <label class="text1">Password:</label>
+             <input type="password" name="password" value="" size="40" class="textinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Enter your password to authorise changes.">
+          </span>
+          <button type="submit" class="btn transparent">Update Account Details</button> <!-- Submit button to update account details -->
+            <br>
+            <br>
+            <br>
+          <img class="ajax-loader" src="http://www.jordancundiff.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
+      </p>
+      <div class="wpcf7-response-output wpcf7-display-none">
+      </div>
+  </form>
+</div>
+
+
+{% endblock %} <!-- End of block -->
+```

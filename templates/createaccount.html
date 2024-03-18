@@ -1,0 +1,61 @@
+<!-- HTML source code for Create Account page -->
+<head>
+  <link rel="stylesheet" href="/static/createaccountloginformstyle.css"> <!-- Link to the CSS file for create account form-->
+   <link rel="stylesheet" href="/static/formstyle.css"> <!-- Link to the main form CSS file -->
+</head>
+{% extends 'base3.html' %} <!-- Extend from base3.html which is the HTML file for the responsive navbar once logged out -->
+
+{% block content %}
+<h2>Create Account</h2> <!-- Title of the page -->
+<form method="post"> <!-- Create account form -->
+  <section1 class="section1 left">
+    <div class="input-container">
+             <label class="text1">First Name</label>
+             <input type="text" id="firstname" name="firstname" placeholder="First Name">
+          </div>
+    <div class="input-container">
+      <label for="lastname." required>Last Name</label>
+      <input type="text" id="lastname" name="lastname" placeholder="Last Name" />
+    </div>
+    <div class="input-container">
+      <label for="username.">Username</label>
+      <input type="text" id="username" name="username" placeholder="Username" />
+    </div>
+    <div class="input-container">
+      <label for="email.">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Email Address" />
+    </div>
+    <div class="input-container">
+      <label for="phone.">Phone Number</label>
+      <input type="number" id="phonenumber" name="phonenumber" placeholder="Phone Number" />
+    </div>
+    <div class="input-container">
+      <label for="password.">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" />
+    </div>
+    <div class="input-container">
+      <label for="confirmpassword.">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" />
+    </div>
+
+  </section1>
+  <section1 class="section1 right">
+    <div class="input-container">
+      <img src="/static/createaccount.png" width="250" height="350"> <!-- Image for the create account form -->
+    </div>
+    </section1>
+  <div class="send-container">
+    <button type="submit" class="btn transparent">Create Account</button> <!-- Submit button for the create account form -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   </div>
+
+</form>
+
+{% endblock %} <!-- End of the block -->
+```

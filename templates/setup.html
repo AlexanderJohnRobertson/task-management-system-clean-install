@@ -1,0 +1,61 @@
+<!-- HTML source code for setup page -->
+<head>
+  <link rel="stylesheet" href="/static/createaccountloginformstyle.css"> <!-- CSS style for the form to set up Task Management System and create Root user. -->
+   <link rel="stylesheet" href="/static/formstyle.css"> <!-- Main CSS style for the form. -->
+</head>
+{% extends 'base5.html' %} <!-- Extend from base5.html which is the HTML file for the responsive navbar during setup -->
+
+{% block content %} <!-- Main content of the page -->
+<h2>First Time Setup - Create Root User</h2> <!-- Title of the form -->
+<form method="post"> <!-- Form for first time setup to create root user -->
+  <section1 class="section1 left">
+    <div class="input-container">
+             <label class="text1">First Name</label>
+             <input type="text" id="firstname" name="firstname" placeholder="First Name">
+          </div>
+    <div class="input-container">
+      <label for="lastname." required>Last Name</label>
+      <input type="text" id="lastname" name="lastname" placeholder="Last Name" />
+    </div>
+    <div class="input-container">
+      <label for="username.">Username (Cannot be changed)</label>
+      <input type="text" id="username" name="username" placeholder="Root" disabled />
+    </div>
+    <div class="input-container">
+      <label for="email.">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Email Address" />
+    </div>
+    <div class="input-container">
+      <label for="phone.">Phone Number</label>
+      <input type="number" id="phonenumber" name="phonenumber" placeholder="Phone Number" />
+    </div>
+    <div class="input-container">
+      <label for="password.">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" />
+    </div>
+    <div class="input-container">
+      <label for="confirmpassword.">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" />
+    </div>
+
+  </section1>
+  <section1 class="section1 right">
+    <div class="input-container">
+      <img src="/static/createaccount.png" width="250" height="350">
+    </div>
+    </section1>
+  <div class="send-container">
+    <button type="submit" class="btn transparent">Create Root User</button> <!-- Button to create root user and submit form data -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   </div>
+
+</form>
+
+{% endblock %} <!-- End of the main content of the page -->
+```

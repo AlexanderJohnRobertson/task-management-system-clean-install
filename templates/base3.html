@@ -1,0 +1,58 @@
+<!-- HTML source code for base3 page for responsive navbars and basic webpage when logged out -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} Task Management System </title> <!-- Title of the webpage -->
+
+    <link rel="stylesheet" href="/static/style2.css"> <!-- Link to the main CSS file for styling all webpages that use base3.html -->
+</head>
+<body>
+    <header>
+    <div class="container"> <!-- Responsive base3 navbar when logged out -->
+      <input type="checkbox" name="check" id="check">
+      <div class="logo-container"> <!-- Logo for the webpage -->
+        <h3 class="logo"><span>Task&nbsp;</span><span>Management&nbsp;</span><span>System</span></h3>
+      </div>
+
+      <div class="nav-btn">
+        <div class="nav-links">
+          <ul>
+            <li class="nav-link" style="--i: .6s">
+              <a href="{{ url_for('index') }}">Home</a>
+            </li>
+
+
+            <div class="log-sign" style="--i: 1.8s">
+             <li class="spacebutton" href="" role="button">_______________________________<li>
+
+          <a href="{{ url_for('createaccount') }}" class="btn transparent"><span>Create&nbsp;</span><span>Account</span></a> <!-- Button to create an account -->
+          <a href="{{ url_for('login') }}" class="btn solid"><span>Log&nbsp;</span><span>In</span></a> <!-- Button to log in -->
+        </div>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="hamburger-menu-container"> <!-- Hamburger menu for the responsive navbar -->
+        <div class="hamburger-menu">
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+    <main>
+    <section>
+      <div>
+    <hr>
+    <div class="content">
+        {% for message in get_flashed_messages() %}
+            <div class="badalert">{{ message }}</div> <!-- Enable Flash messages -->
+        {% endfor %}
+        {% block content %} {% endblock %} <!-- Content block for the webpage -->
+    </div>
+    </div>
+    </section>
+    </main>
+</body>
+</html>

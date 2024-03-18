@@ -1,0 +1,126 @@
+/* Original CSS for webapp, mostly replaced by style2.css  due to improved responsiveness.  Still used in accessdenied.html */
+        .heading1 {
+            font-size: 30px;
+            color: #ffffff;
+        } /* Heading 1 */
+
+        .text1 {
+            font-size: 20px;
+            color: #ffffff;
+        } /* Text 1 */
+        .message {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        } /* Message */
+        nav a {
+            color: #d64161;
+            font-size: 2em;
+            margin-left: 50px;
+            text-decoration: none;
+        } /* Navigation */
+        .badalert {
+            padding: 20px;
+            margin: 5px;
+            color: #970020;
+            background-color: #ffd5de;
+        } /* Bad Alert for Flash Messages */
+        .goodalert {
+            padding: 20px;
+            margin: 5px;
+            color: #26ff00;
+            background-color: #e0ffd5;
+        } /* Good Alert for Flash Messages */
+        .button1 {
+        background-color: #dd00ff; /* Green */
+        border: none;
+        color: white;
+        padding: 8px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+            transition-duration: 0.4s;
+        } /* Button 1 */
+
+        .button2 {
+        background-color: #dcdcdc; /* Green */
+        border: none;
+        color: #000000;
+        padding: 8px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+            transition-duration: 0.4s;
+        } /* Button 2 */
+
+        .button1:hover {
+        background-color: #ff8900; /* Green */
+        color: white;
+        } /* Button 1 Hover */
+        .button2:hover {
+        background-color: #78ff00; /* Green */
+        color: white;
+        } /* Button 2 Hover */
+
+        .button3 {
+         background-color: #6b747c; /* Green */
+        border: none;
+        color: #fdf5f5;
+        padding: 8px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 8px;
+            transition-duration: 0.4s;
+        } /* Button 3 */
+
+        .button3:hover {
+        background-color: #596167; /* Green */
+        color: #fbf3f3;
+        } /* Button 3 Hover */
+
+        .nav-link {
+            color: #ffffff;
+            font-size: 20px;
+            margin-left: 50px;
+            text-decoration: none;
+        } /* Navigation Link */
+
+        .body {
+            background-color: #3a3b3f;
+        } /* Body */
+
+        .navbar {
+            background-color: #24262b;
+        } /* Navbar */
+
+
+        .spacebutton {
+            color: #24262b;
+        }  /* Space Button */
+        .spacebutton2 {
+            color: #3a3b3f;
+        }   /* Space Button 2 */
+
+        .table-responsive {
+            color: #fda700;
+            font-size: 20px;
+        }   /* Table Responsive */
+
+        .tableStyle {
+            color: #fda700;
+        }   /* Table Style */
+
+        .access-denied {
+            color: #ff0000;
+        }   /* Access Denied */
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .topnav .icon {
+            display: none;
+        } /* Topnav Icon */

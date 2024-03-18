@@ -1,0 +1,43 @@
+<!-- HTML source code for view users page -->
+<head>
+    <link rel="stylesheet" href="/static/tablestyle.css"> <!-- Link to the CSS file to format and style the table -->
+</head>
+
+{% extends 'base4.html' %} <!-- Extend from base4.html which is the HTML file for the responsive navbar while logged in -->
+
+{% block content %} <!-- The content block is where the content of the page is displayed -->
+<div class="table-container"> <!-- The table container is used to format the table and make it responsive -->
+  <table> <!-- Table to display the list of users from the database -->
+  <caption>View Users</caption> <!-- Caption for the table -->
+  <thead>
+    <tr>
+      <th scope="col">Username</th> <!-- Table headers -->
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email Address</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Account Type</th>
+        <th scope="col">Blocked</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+  {% for row in data1 %} <!-- For loop to iterate through the data1 variable which contains the list of users from the database -->
+    <tr>
+      <td data-label="Username">{{ row[0] }}</td> <!-- Display the Username -->
+      <td data-label="First Name">{{ row[1] }}</td> <!-- Display the First Name -->
+      <td data-label="Last Name">{{ row[2] }}</td> <!-- Display the Last Name -->
+      <td data-label="Email Address">{{ row[3] }}</td> <!-- Display the Email Address -->
+        <td data-label="Phone Number">{{ row[4] }}</td> <!-- Display the Phone Number -->
+        <td data-label="Account Type">{{ row[5] }}</td> <!-- Display the Account Type -->
+        <td data-label="Blocked">{{ row[6] }}</td> <!-- Display the Blocked status -->
+
+    </tr>
+  {% endfor %} <!-- End of the for loop -->
+  </tbody>
+</table>
+  </div>
+
+{% endblock %} <!-- End of the content block -->
+```

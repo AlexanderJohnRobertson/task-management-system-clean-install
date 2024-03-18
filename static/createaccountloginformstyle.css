@@ -1,0 +1,120 @@
+/* This file is used to style the create account, login and setup forms */
+/* Original CSS sourced from codepen.io and modified by S275931 to suit the application. https://codepen.io/andstudio/pen/eYNeMM */
+* {
+  box-sizing: border-box;
+} /* Box Sizing */
+
+h2 {
+  text-align: center;
+  margin: 10px 0;
+  color: #ffffff;
+  font-size: 47px;
+  font-family: 'Quicksand', sans-serif;
+  @media(max-width:540px){
+      font-size: 28px;
+    margin: 30px 0;
+  }
+} /* Heading 2 */
+
+form {
+  padding: 0 10%;
+  .section1 {
+    width: calc(50% - 40px);
+    padding: 20px;
+    background: #3c3f3f;
+    margin: 20px;
+    border-radius: 5px;
+    &.left {
+      float: left;
+    }
+    &.right {
+      float: right;
+    }
+    .input-container {
+      label {
+        display: block;
+        margin-bottom: 4px;
+        color: white;
+        font-size: 16px;
+        text-shadow: 0px 2px 1px #2b2d30;
+        font-family: 'Quicksand', sans-serif;
+
+      } /* Label */
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        background: #242626;
+        box-shadow: 0 2px 0px #242626;
+    height: 48px;
+    border: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 5px;
+      } /* Input and Textarea */
+      textarea {
+        height: 122px;
+        padding: 15px 10px;
+        resize: none;
+      } /* Textarea */
+      padding:3px;
+    } /* Input Container */
+  } /* Section 1 */
+  .send-container {
+    float: left;
+    width: 100%;
+    text-align: left;
+    margin-left: 50px;
+    input {
+      background: #dd00ff;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: .5rem 1.3rem;
+      font-size: .8rem;
+      border-radius: 2rem;
+      line-height: 1;
+      margin: 0 .2rem;
+      transition: .3s;
+      text-transform: uppercase;
+      &:hover {
+        background: #ff8900;
+      } /* Input Hover */
+    } /* Input */
+  } /* Send Container */
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  @media(max-width:992px) {
+    padding: 0 5%;
+  } /* Form */
+  @media(max-width:768px) {
+    margin-bottom:50px;
+    section1 {
+      width: 100%;
+      margin: 0;
+      &.left {
+        margin-bottom: 100%;
+      } /* Left */
+    }
+    .send-container {
+      margin-left: 10px;
+      margin-top:15px;
+      input{
+        width:100%;
+      } /* Input */
+    } /* Send Container */
+  } /* Media Query */
+} /* Form */

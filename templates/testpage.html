@@ -1,0 +1,61 @@
+<!-- test page to experiment with and test new features -->
+<head>
+  <link rel="stylesheet" href="/static/createaccountloginformstyle.css  ">
+   <link rel="stylesheet" href="/static/formstyle.css  ">
+</head>
+{% extends 'base3.html' %}
+
+{% block content %}
+    <h2>This is a test page to experiment with and test new features</h2>
+<h2>Create Account</h2>
+<form method="post">
+  <section1 class="section1 left">
+    <div class="input-container">
+             <label class="text1">First Name</label>
+             <input type="text" id="firstname" name="firstname" placeholder="First Name">
+          </div>
+    <div class="input-container">
+      <label for="lastname." required>Last Name</label>
+      <input type="text" id="lastname" name="lastname" placeholder="Last Name" />
+    </div>
+    <div class="input-container">
+      <label for="username.">Username</label>
+      <input type="text" id="username" name="username" placeholder="Username" />
+    </div>
+    <div class="input-container">
+      <label for="email.">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Email Address" />
+    </div>
+    <div class="input-container">
+      <label for="phone.">Phone Number</label>
+      <input type="number" id="phonenumber" name="phonenumber" placeholder="Phone Number" />
+    </div>
+    <div class="input-container">
+      <label for="password.">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" />
+    </div>
+    <div class="input-container">
+      <label for="confirmpassword.">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" />
+    </div>
+
+  </section1>
+  <section1 class="section1 right">
+    <div class="input-container">
+      <img src="/static/createaccount.png" width="250" height="350">
+    </div>
+    </section1>
+  <div class="send-container">
+    <button type="submit" class="btn transparent">Create Account</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   </div>
+
+</form>
+
+{% endblock %}

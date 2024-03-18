@@ -1,0 +1,41 @@
+<!-- HTML source code for Account Details page -->
+<head>
+    <link rel="stylesheet" href="/static/tablestyle.css"> <!-- Link to the CSS file to style the table -->
+</head>
+
+{% extends 'base4.html' %} <!-- Extend from base4.html which is the HTML file for the responsive navbar once logged in -->
+
+{% block content %} <!-- Content block for the HTML content of the page -->
+<div class="table-container">
+  <table> <!-- Table to display the account details of the user -->
+  <caption>Your Account Details</caption>
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email Address</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Account Type</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+  {% for row in data1 %} <!-- For loop to iterate through the data1 list and display the account details of the user -->
+    <tr>
+      <td data-label="Username">{{ row[0] }}</td>
+      <td data-label="First Name">{{ row[1] }}</td>
+      <td data-label="Last Name">{{ row[2] }}</td>
+      <td data-label="Email Address">{{ row[3] }}</td>
+        <td data-label="Phone Number">{{ row[4] }}</td>
+        <td data-label="Account Type">{{ row[5] }}</td>
+
+    </tr>
+  {% endfor %} <!-- End of for loop -->
+  </tbody>
+</table>
+  </div>
+
+{% endblock %} <!-- End of content block -->
+```
