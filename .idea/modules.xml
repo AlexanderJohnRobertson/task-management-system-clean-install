@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TaskManagementSystemCleanInstall.iml" filepath="$PROJECT_DIR$/.idea/TaskManagementSystemCleanInstall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TaskManagementSystem_Clean_Install.iml" filepath="$PROJECT_DIR$/.idea/TaskManagementSystem_Clean_Install.iml" />
     </modules>
   </component>
 </project>
