@@ -1631,7 +1631,7 @@ def testpage():
 def testpage2():
     '''This is a test page for testing purposes.'''
     for i in range(10):
-        print("Hello Worlddd.")
+        print("Hello World..")
     return render_template('testpage2.html')
 
 @app.route('/test3')
